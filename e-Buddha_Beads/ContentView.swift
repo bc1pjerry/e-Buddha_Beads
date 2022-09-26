@@ -8,34 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isTap = false
-    
-    private func firstBead() -> some View {
-        Circle()
-            .frame(width: 80)
-            .foregroundColor(Color("ThirdBead"))
-            .offset(x: 0, y: -180)
-    }
-    private func secondBead() -> some View {
-        Circle()
-            .frame(width: 100)
-            .foregroundColor(Color("SecondBead"))
-            .offset(x: 0, y: -100)
-    }
-    private func mainBead() -> some View {
-        Circle()
-            .frame(width: 150)
-            .foregroundColor(.orange)
-            
-    }
     var body: some View {
-        ZStack {
-            firstBead()
-            secondBead()
-            mainBead()
-        }
-        .onTapGesture {
-            
+        ZStack{
+            BeadTemplate(index: 2)
+            BeadTemplate(index: 1)
+            BeadTemplate(index: 0)
+            BeadTemplate(index: -1)
+            BeadTemplate(index: -2)
         }
     }
 }
