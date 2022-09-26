@@ -11,10 +11,16 @@ struct MainBead: View {
     @State var isTouched = false
     @State var beadIndex = 0
     var body: some View {
-        VStack {
+        ZStack {
             circle(index: beadIndex)
-            Text("\(beadIndex)")
+            circle(index: beadIndex)
+            circle(index: beadIndex)
+            circle(index: beadIndex)
+            circle(index: beadIndex)
+            Text("\(beadIndex)").foregroundColor(.red)
         }
+        .contentShape(Rectangle())
+        .border(.black)
         .onTapGesture {
             countIndex()
         }
@@ -26,14 +32,12 @@ struct MainBead: View {
             Circle()
                 .frame(width: 80)
                 .foregroundColor(Color("ThirdBead"))
-                .scaleEffect(CGSize(width: 0.5, height: 0.5))
-                .offset(x: 0, y: 100)
+                .offset(x: 0, y: -215)
         case 1:
             Circle()
                 .frame(width: 100)
                 .foregroundColor(Color("SecondBead"))
-                .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .offset(x: 0, y: 50)
+                .offset(x: 0, y: -125)
         case 0:
             Circle()
                 .frame(width: 150)
@@ -42,21 +46,19 @@ struct MainBead: View {
             Circle()
                 .frame(width: 100)
                 .foregroundColor(Color("SecondBead"))
-                .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .offset(x: 0, y: -50)
+                .offset(x: 0, y: 125)
         case -2:
             Circle()
                 .frame(width: 80)
                 .foregroundColor(Color("ThirdBead"))
-                .scaleEffect(CGSize(width: 0.5, height: 0.5))
-                .offset(x: 0, y: -100)
+                .offset(x: 0, y: 215)
         default:
             Circle()
         }
     }
     
     private func countIndex() {
-        if beadIndex == -2 {
+        if beadIndex >= -2 {
             beadIndex = 2
         } else {
             beadIndex -= 1
