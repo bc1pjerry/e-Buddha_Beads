@@ -20,6 +20,8 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             Text("\(index)")
+                .frame(width: 200, height: 500)
+                .border(.black)
         }
         .contentShape(Rectangle())
         .gesture(gesture)

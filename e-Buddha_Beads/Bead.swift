@@ -1,32 +1,26 @@
 //
-//  CustomCircle.swift
+//  Beads.swift
 //  e-Buddha_Beads
 //
-//  Created by Jerry on 9/26/22.
+//  Created by Jerry on 2022/9/29.
 //
 
 import SwiftUI
 
-struct BeadTemplate: View {
-    @State var index = -2
+struct Bead: View {
+    var beadFrameWidth: CGFloat
+    var beadOffsite: CGFloat
+    var beadIndex: Int
     var body: some View {
-        ZStack{
-            circle(index: index)
-        }
-        .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation(.linear) {
-                if index != -2 {
-                    index -= 1
-                } else {
-                    index = 2
-                }
-            }
-        }
+        Circle()
+            .frame(width: beadFrameWidth)
+            .foregroundColor(.orange)
+            .offset(y: beadOffsite)
+            .animation(.easeInOut, value: beadIndex)
     }
 }
 
-@ViewBuilder func circle(index: Int) -> some View {
+@ViewBuilder private func circle(index: Int) -> some View {
     switch index {
     case 2:
         Circle()
@@ -57,9 +51,8 @@ struct BeadTemplate: View {
     }
 }
 
-
-struct CustomCircle_Previews: PreviewProvider {
+struct Beads_Previews: PreviewProvider {
     static var previews: some View {
-        BeadTemplate(index: 0)
+        Bead(beadFrameWidth: 100, beadOffsite: 0, beadIndex: 0)
     }
 }
