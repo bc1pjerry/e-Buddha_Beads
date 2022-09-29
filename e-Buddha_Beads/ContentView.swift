@@ -13,15 +13,13 @@ struct ContentView: View {
     var gesture: some Gesture {
         DragGesture()
             .onEnded { _ in
-                index = Int.random(in: 0...9)
+                index = Int.random(in: -2...2)
                 simpleSuccess()
             }
     }
     var body: some View {
         ZStack{
-            Text("\(index)")
-                .frame(width: 200, height: 500)
-                .border(.black)
+            Demo(index: index)
         }
         .contentShape(Rectangle())
         .gesture(gesture)

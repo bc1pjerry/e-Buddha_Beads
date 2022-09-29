@@ -9,36 +9,57 @@ import SwiftUI
 
 struct Demo: View {
     @State var index = 0
+    @State var beads: [Bead] = [
+        Bead(bead: initBeads(index: 2)),
+        Bead(bead: initBeads(index: 1)),
+        Bead(bead: initBeads(index: 0)),
+        Bead(bead: initBeads(index: -2)),
+        Bead(bead: initBeads(index: -2))
+    ]
     var body: some View {
         ZStack {
-            
+            Bead(bead: initBeads(index: index + 2))
+            Bead(bead: initBeads(index: index + 1))
+            Bead(bead: initBeads(index: index))
+            Bead(bead: initBeads(index: index - 1))
+            Bead(bead: initBeads(index: index - 2))
+            Text("\(index)")
         }
         .onTapGesture {
             withAnimation(.easeInOut) {
-                
+                if index == -2 {
+                    index = 2
+                } else {
+                    index -= 1
+                }
             }
         }
     }
 }
 
-private func freshWidth(index: Int) -> CGFloat {
+private func initBeads(index: Int) -> BeadModel {
+    var bead: BeadModel
+    
     switch index {
-    case 2, -2:
-        return CGFloat(80)
-    case 1, -1:
-        return CGFloat(100)
+    case 2:
+        bead = BeadModel(beadFrameWidth: 80, beadOffsite: -215, color: Color("ThirdBead"))
+        return bead
+    case 1:
+        bead = BeadModel(beadFrameWidth: 100, beadOffsite: -125, color: Color("SecondBead"))
+        return bead
     case 0:
-        return CGFloat(150)
+        bead = BeadModel(beadFrameWidth: 150, beadOffsite: 0, color: .orange)
+        return bead
+    case -1:
+        bead = BeadModel(beadFrameWidth: 100, beadOffsite: 125, color: Color("SecondBead"))
+        return bead
+    case -2:
+        bead = BeadModel(beadFrameWidth: 80, beadOffsite: 215, color: Color("ThirdBead"))
+        return bead
     default:
-        return CGFloat(150)
+        return BeadModel(beadFrameWidth: 150, beadOffsite: 0, color: .gray)
     }
 }
-
-private func counter(index: Int) {
-    
-}
-
-
 
 struct Demo_Previews: PreviewProvider {
     static var previews: some View {

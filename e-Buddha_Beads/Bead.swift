@@ -7,52 +7,25 @@
 
 import SwiftUI
 
-struct Bead: View {
+struct BeadModel {
     var beadFrameWidth: CGFloat
     var beadOffsite: CGFloat
-    var beadIndex: Int
-    var body: some View {
-        Circle()
-            .frame(width: beadFrameWidth)
-            .foregroundColor(.orange)
-            .offset(y: beadOffsite)
-            .animation(.easeInOut, value: beadIndex)
-    }
+    var color: Color
 }
 
-@ViewBuilder private func circle(index: Int) -> some View {
-    switch index {
-    case 2:
+struct Bead: View {
+    var bead: BeadModel
+    var body: some View {
         Circle()
-            .frame(width: 80)
-            .foregroundColor(Color("ThirdBead"))
-            .offset(x: 0, y: -215)
-    case 1:
-        Circle()
-            .frame(width: 100)
-            .foregroundColor(Color("SecondBead"))
-            .offset(x: 0, y: -125)
-    case 0:
-        Circle()
-            .frame(width: 150)
-            .foregroundColor(.orange)
-    case -1:
-        Circle()
-            .frame(width: 100)
-            .foregroundColor(Color("SecondBead"))
-            .offset(x: 0, y: 125)
-    case -2:
-        Circle()
-            .frame(width: 80)
-            .foregroundColor(Color("ThirdBead"))
-            .offset(x: 0, y: 215)
-    default:
-        Circle()
+            .frame(width: bead.beadFrameWidth)
+            .offset(y: bead.beadOffsite)
+            .foregroundColor(bead.color)
     }
 }
 
 struct Beads_Previews: PreviewProvider {
     static var previews: some View {
-        Bead(beadFrameWidth: 100, beadOffsite: 0, beadIndex: 0)
+        let bead = BeadModel(beadFrameWidth: 150, beadOffsite: 0, color: .orange)
+        Bead(bead: bead)
     }
 }
