@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct BeadTemplate: View {
-    @State var index = 0
+    @State var index = -2
     var body: some View {
         ZStack{
             circle(index: index)
         }
+        .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.linear) {
                 if index != -2 {

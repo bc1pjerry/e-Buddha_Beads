@@ -12,7 +12,6 @@
 		C4A4B54E28E097E50018914C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A4B54D28E097E50018914C /* Assets.xcassets */; };
 		C4A4B55128E097E50018914C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A4B55028E097E50018914C /* Preview Assets.xcassets */; };
 		C4A4B55828E1E8710018914C /* BeadTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4B55728E1E8710018914C /* BeadTemplate.swift */; };
-		C4A4B55C28E1F1D90018914C /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4B55B28E1F1D90018914C /* Demo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		C4A4B54D28E097E50018914C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A4B55028E097E50018914C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4A4B55728E1E8710018914C /* BeadTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeadTemplate.swift; sourceTree = "<group>"; };
-		C4A4B55B28E1F1D90018914C /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 			children = (
 				C4A4B54928E097E50018914C /* e_Buddha_BeadsApp.swift */,
 				C4A4B54B28E097E50018914C /* ContentView.swift */,
-				C4A4B55B28E1F1D90018914C /* Demo.swift */,
 				C4A4B55728E1E8710018914C /* BeadTemplate.swift */,
 				C4A4B54D28E097E50018914C /* Assets.xcassets */,
 				C4A4B54F28E097E50018914C /* Preview Content */,
@@ -145,7 +142,6 @@
 			files = (
 				C4A4B54C28E097E50018914C /* ContentView.swift in Sources */,
 				C4A4B55828E1E8710018914C /* BeadTemplate.swift in Sources */,
-				C4A4B55C28E1F1D90018914C /* Demo.swift in Sources */,
 				C4A4B54A28E097E50018914C /* e_Buddha_BeadsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +271,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"e-Buddha_Beads/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QCQZX7QTR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "e-buddha";
@@ -306,7 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"e-Buddha_Beads/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QCQZX7QTR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "e-buddha";
