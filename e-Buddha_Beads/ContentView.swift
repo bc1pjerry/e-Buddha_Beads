@@ -13,8 +13,14 @@ struct ContentView: View {
     var gesture: some Gesture {
         DragGesture()
             .onEnded { _ in
-                index = Int.random(in: -2...2)
-                simpleSuccess()
+                withAnimation(.easeInOut) {
+                    if index == -2 {
+                        index = 2
+                    } else {
+                        index -= 1
+                    }
+                    simpleSuccess()
+                }
             }
     }
     var body: some View {
