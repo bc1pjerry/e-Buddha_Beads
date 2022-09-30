@@ -29,7 +29,7 @@ private func initBeads(index: Int, offset: Int) -> BeadModel {
     let trueIndex = index + offset
     switch trueIndex {
     case 3, -4:
-        bead = BeadModel(beadFrameWidth: 10, beadOffsite: -255, color: .black)
+        bead = BeadModel(beadFrameWidth: 0, beadOffsite: -255, color: Color(white: 1.0, opacity: 0))
         return bead
     case 2 ,-5:
         bead = BeadModel(beadFrameWidth: 80, beadOffsite: -215, color: Color("ThirdBead"))
@@ -47,10 +47,10 @@ private func initBeads(index: Int, offset: Int) -> BeadModel {
         bead = BeadModel(beadFrameWidth: 80, beadOffsite: 215, color: Color("ThirdBead"))
         return bead
     case -3, 4:
-        bead = BeadModel(beadFrameWidth: 10, beadOffsite: 255, color: .black)
+        bead = BeadModel(beadFrameWidth: 0, beadOffsite: 255, color: Color(white: 1.0, opacity: 0))
         return bead
     default:
-        return BeadModel(beadFrameWidth: 150, beadOffsite: 0, color: .gray)
+        return BeadModel(beadFrameWidth: 150, beadOffsite: 0, color: Color(.gray))
     }
 }
 
