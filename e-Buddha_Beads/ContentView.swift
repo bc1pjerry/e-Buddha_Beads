@@ -17,7 +17,7 @@ struct ContentView: View {
                     if index == -3 {
                         index = 3
                     } else {
-                        index -= 1
+                        index -= 1 
                     }
                     simpleSuccess()
                 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C40A3DA628E58A0F000ADE34 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3DA528E58A0F000ADE34 /* Demo.swift */; };
 		C40A3DAA28E5A627000ADE34 /* Bead.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3DA928E5A627000ADE34 /* Bead.swift */; };
+		C469B9F128E73C8000372A02 /* TextOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C469B9F028E73C8000372A02 /* TextOverlay.swift */; };
+		C469B9F628E7459000372A02 /* hit.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C469B9F528E7459000372A02 /* hit.m4a */; };
 		C4A4B54A28E097E50018914C /* e_Buddha_BeadsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4B54928E097E50018914C /* e_Buddha_BeadsApp.swift */; };
 		C4A4B54C28E097E50018914C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4B54B28E097E50018914C /* ContentView.swift */; };
 		C4A4B54E28E097E50018914C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A4B54D28E097E50018914C /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		C40A3DA528E58A0F000ADE34 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		C40A3DA928E5A627000ADE34 /* Bead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bead.swift; sourceTree = "<group>"; };
+		C469B9F028E73C8000372A02 /* TextOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOverlay.swift; sourceTree = "<group>"; };
+		C469B9F528E7459000372A02 /* hit.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hit.m4a; sourceTree = "<group>"; };
 		C4A4B54628E097E50018914C /* e-Buddha_Beads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Buddha_Beads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A4B54928E097E50018914C /* e_Buddha_BeadsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_Buddha_BeadsApp.swift; sourceTree = "<group>"; };
 		C4A4B54B28E097E50018914C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,9 +59,11 @@
 		C4A4B54828E097E50018914C /* e-Buddha_Beads */ = {
 			isa = PBXGroup;
 			children = (
+				C469B9F528E7459000372A02 /* hit.m4a */,
 				C4A4B54928E097E50018914C /* e_Buddha_BeadsApp.swift */,
 				C4A4B54B28E097E50018914C /* ContentView.swift */,
 				C40A3DA528E58A0F000ADE34 /* Demo.swift */,
+				C469B9F028E73C8000372A02 /* TextOverlay.swift */,
 				C40A3DA928E5A627000ADE34 /* Bead.swift */,
 				C4A4B54D28E097E50018914C /* Assets.xcassets */,
 				C4A4B54F28E097E50018914C /* Preview Content */,
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C469B9F628E7459000372A02 /* hit.m4a in Resources */,
 				C4A4B55128E097E50018914C /* Preview Assets.xcassets in Resources */,
 				C4A4B54E28E097E50018914C /* Assets.xcassets in Resources */,
 			);
@@ -146,6 +153,7 @@
 				C4A4B54C28E097E50018914C /* ContentView.swift in Sources */,
 				C40A3DAA28E5A627000ADE34 /* Bead.swift in Sources */,
 				C40A3DA628E58A0F000ADE34 /* Demo.swift in Sources */,
+				C469B9F128E73C8000372A02 /* TextOverlay.swift in Sources */,
 				C4A4B54A28E097E50018914C /* e_Buddha_BeadsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creatisan.e-Buddha-Beads";
+				PRODUCT_BUNDLE_IDENTIFIER = com.creatisan.ebeads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creatisan.e-Buddha-Beads";
+				PRODUCT_BUNDLE_IDENTIFIER = com.creatisan.ebeads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

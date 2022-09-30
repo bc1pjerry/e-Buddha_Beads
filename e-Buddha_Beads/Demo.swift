@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct Demo: View {
     var index = 0
@@ -18,8 +19,6 @@ struct Demo: View {
             Bead(bead: initBeads(index: index, offset: 2))
             Bead(bead: initBeads(index: index, offset: 3))
             Bead(bead: initBeads(index: index, offset: 0))
-
-            Text("\(index)")
         }
     }
 }
