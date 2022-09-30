@@ -14,8 +14,8 @@ struct ContentView: View {
         DragGesture()
             .onEnded { _ in
                 withAnimation(.easeInOut) {
-                    if index == -2 {
-                        index = 2
+                    if index == -3 {
+                        index = 3
                     } else {
                         index -= 1
                     }
