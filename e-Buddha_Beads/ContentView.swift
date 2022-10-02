@@ -10,6 +10,7 @@ import UIKit
 
 struct ContentView: View {
     @State var index = 0
+    @State var isTouched = false
     var gesture: some Gesture {
         DragGesture()
             .onEnded { _ in
@@ -17,18 +18,20 @@ struct ContentView: View {
                     if index == -3 {
                         index = 3
                     } else {
-                        index -= 1 
+                        index -= 1
                     }
                     simpleSuccess()
                 }
             }
     }
     var body: some View {
-        ZStack{
-            Demo(index: index)
+        VStack{
+            ZStack{
+                Demo(index: index)
+            }
+            .gesture(gesture)
+            
         }
-        .contentShape(Rectangle())
-        .gesture(gesture)
     }
 }
 
